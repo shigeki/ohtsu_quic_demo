@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PageLoad time</title>
+    <script>
+      function onLoad() {
+        var id = document.getElementById('result');
+        var now = new Date().getTime();
+        var page_load_time = now - performance.timing.navigationStart;
+        id.innerHTML = "Page Load Time: " + page_load_time + '[ms]';
+        console.log("Page Load Time:" + page_load_time + '[ms]');
+      }
+      window.onload = onLoad;
+  </script>
+  </head>
+  <body>
+    <div id='result'>Page Load Time</div>
+  </body>
+</html>
